@@ -17,7 +17,7 @@
   "trailing": true,
   "sub": true,
   "maxlen": 120,
-  "esversion": 6,
+  "esnext": true,
   "browser": true,
   "node": true,
   "mocha": true,

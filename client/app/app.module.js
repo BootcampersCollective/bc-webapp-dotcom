@@ -1,7 +1,7 @@
 angular.module('app', [
 	'ui.router',
 	'app.common',
-	'app.base',
+	'app.core',
 	'app.layout',
 	'app.home',
 	'app.about',
