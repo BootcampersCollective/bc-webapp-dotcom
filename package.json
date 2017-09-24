@@ -1,0 +1,41 @@
+{
+  "name": "bc-webapp-dotcom",
+  "version": "1.0.0",
+  "description": "Website for Bootcampers Collective",
+  "main": "index.js",
+  "repository": "https://github.com/BootcampersCollective/bc-webapp-dotcom.git",
+  "author": "Wesley Song <wes.song@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^4.5.3"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2"
+  }
+}
