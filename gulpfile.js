@@ -86,7 +86,7 @@ gulp.task('clientScripts', function () {
 		.pipe(ngAnnotate())
 		.pipe(sourceMaps.init())
 		.pipe(babel({
-			presets: ['es2015']
+			presets: ['env']
 		}))
 		.pipe(concat('angular.bundle.js'))
 		.pipe(uglify())
@@ -99,7 +99,7 @@ gulp.task('serverScripts', function() {
 	console.log('---Starting Server Scripts task---');
 	return gulp.src([SERVER_SCRIPTS_PATH])
 		.pipe(babel({
-			presets: ['es2015']
+			presets: ['env']
 		}))
 		.pipe(concat('index.js'))
 		.pipe(uglify())
