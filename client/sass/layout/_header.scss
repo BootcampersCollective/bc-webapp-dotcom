@@ -1,16 +1,30 @@
-.header {
+.header-container {
+  background-color: $bcblue;
+  padding: 5px 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @include breakpoint($bp-768) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .logo-container {
-
+    margin: auto 0;
   }
 
   .link-bar {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 
+    @include breakpoint($bp-768) {
+      width: 400px;
+    }
   }
 
   .menu-container {
-
+    margin: auto 0;
   }
 }

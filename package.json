@@ -6,11 +6,6 @@
   "repository": "https://github.com/BootcampersCollective/bc-webapp-dotcom.git",
   "author": "Wesley Song <wes.song@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "pm2 start index.js -i max — name=\”bc-webapp\”",
-    "restart": "pm2 restart all",
-    "test": "your test script goes here"
-  },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "del": "^3.0.0",
