@@ -1,5 +1,6 @@
 angular.module('app', [
 	'ui.router',
+	'ngAnimate',
 	'app.common',
 	'app.core',
 	'app.layout',

@@ -1,11 +1,17 @@
 const testimonialsComponent = {
 	bindings: {},
-	controller: /*@ngInject*/ function () {
+	controller: /*@ngInject*/ function (apiService) {
 		let ctrl = this;
 
 		ctrl.publicMethods = publicMethods;
 
-		ctrl.$onInit = function () {};
+		ctrl.$onInit = function () {
+			apiService.getTestimonials()
+				.then(function (res) {
+					console.log('getTestimonials res', res);
+					ctrl.testimonials = res.data;
+				});
+		};
 		ctrl.$postLink = function () {};
 		ctrl.$onChange = function () {};
 		ctrl.$onDestroy = function () {};
@@ -15,7 +21,12 @@ const testimonialsComponent = {
 		// function privateMethod() {}
 	},
 	template: `<div>
-<h1>Testimonials</h1>
+    <h1>Testimonials</h1>
+    <div class="testimonial-container">
+        <div ng-repeat="testimonial in $ctrl.testimonials">
+            {{testimonial}}
+        </div>
+    </div>
 </div>`
 };
 

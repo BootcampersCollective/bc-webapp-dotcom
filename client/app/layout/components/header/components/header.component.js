@@ -28,7 +28,7 @@ const headerComponent = {
     <div class="menu-container" ng-click="$ctrl.userMenu = !$ctrl.userMenu">
         <i class="fa fa-user fa-2x" aria-hidden="true"></i>
     </div>
-    <div class="user-menu" ng-if="$ctrl.userMenu">
+    <div class="user-menu" ng-show="$ctrl.userMenu">
         <div class="menu-button">Login</div>
         <div class="menu-button">Logout</div>
     </div>

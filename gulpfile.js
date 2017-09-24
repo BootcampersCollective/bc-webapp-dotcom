@@ -10,6 +10,7 @@ let sass = require('gulp-sass');
 let autoprefixer = require('gulp-autoprefixer');
 let livereload = require('gulp-livereload');
 let debug = require('gulp-debug');
+let nodemon = require('gulp-nodemon');
 
 // File paths
 const VENDOR_SCRIPTS = [
@@ -22,7 +23,6 @@ const VENDOR_SCRIPTS = [
 	'node_modules/angular-sanitize/angular-sanitize.js',
 ];
 const CLIENT_SCRIPTS_PATH = ['client/app/**/*.module.js', 'client/app/**/*.js'];
-const SERVER_SCRIPTS_PATH = 'server/server.js';
 const STYLE_PATH = 'client/sass/**/*.scss';
 const IMAGE_PATH = 'assets/images/*';
 const FONT_PATH = 'assets/fonts/*';
@@ -95,18 +95,6 @@ gulp.task('clientScripts', function () {
 		.pipe(livereload());
 });
 
-gulp.task('serverScripts', function() {
-	console.log('---Starting Server Scripts task---');
-	return gulp.src([SERVER_SCRIPTS_PATH])
-		.pipe(babel({
-			presets: ['env']
-		}))
-		.pipe(concat('index.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./'))
-		.pipe(livereload());
-});
-
 gulp.task('clean', function() {
 	return del.sync([
 		'public/'
@@ -122,7 +110,6 @@ gulp.task('default', [
 	'styles',
 	'vendorScripts',
 	'clientScripts',
-	'serverScripts'
 ], function () {
 	console.log('---Starting Default task---');
 });
@@ -130,11 +117,10 @@ gulp.task('default', [
 // Watch
 gulp.task('watch', ['default'], function () {
 	console.log('---Starting Watch task---');
-	require('./index.js');
+	require('./server/server.js');
 	livereload.listen();
 	gulp.watch(INDEX_PATH, ['copyIndex']);
 	gulp.watch(IMAGE_PATH, ['copyImage']);
 	gulp.watch(CLIENT_SCRIPTS_PATH, ['clientScripts']);
 	gulp.watch(STYLE_PATH, ['styles']);
-	gulp.watch(SERVER_SCRIPTS_PATH, ['serverScripts']);
 });
