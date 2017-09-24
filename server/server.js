@@ -45,4 +45,4 @@ app.get('*', function (req, res){
 });
 
 app.listen(process.env.NODE_PORT || 3000);
-console.log('Server started listening on 3030');
+console.log('Server started listening on 3000');
