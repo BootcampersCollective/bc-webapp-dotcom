@@ -16,5 +16,5 @@ function baseRoute($stateProvider) {
 		});
 }
 
-angular.module('app.base')
+angular.module('app.core')
 	.config(baseRoute);

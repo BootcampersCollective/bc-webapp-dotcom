@@ -59,7 +59,7 @@ gulp.task('copyIndex', function () {
 // Styles
 gulp.task('styles', function () {
 	console.log('---Starting Styles task---');
-	return gulp.src('client/sass/style.scss')
+	return gulp.src('client/sass/main.scss')
 		.pipe(sourceMaps.init())
 		.pipe(autoprefixer())
 		.pipe(sass({
