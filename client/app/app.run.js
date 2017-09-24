@@ -16,19 +16,5 @@ function appTransitions($rootScope, $trace) {
 	});
 }
 
-/*@ngInject*/
-function authCheck($transitions, $state) {
-	$transitions.onBefore({to: 'app.about'}, function (trans) {
-		var api = trans.injector().get('apiService');
-		api.checkAuth({token: '123456'})
-			.catch(function (err) {
-				console.log('failed auth', err);
-				$state.go('app.home');
-			});
-
-	});
-}
-
 angular.module('app')
-	.run(appTransitions)
-	.run(authCheck);
+	.run(appTransitions);

@@ -23,7 +23,7 @@ const VENDOR_SCRIPTS = [
 ];
 const CLIENT_SCRIPTS_PATH = ['client/app/**/*.module.js', 'client/app/**/*.js'];
 const SERVER_SCRIPTS_PATH = 'server/server.js';
-const STYLE_PATH = 'client/app/**/*.scss';
+const STYLE_PATH = 'client/sass/**/*.scss';
 const IMAGE_PATH = 'assets/images/*';
 const FONT_PATH = 'assets/fonts/*';
 const INDEX_PATH = 'assets/index.html';

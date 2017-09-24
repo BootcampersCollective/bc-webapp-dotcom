@@ -5,5 +5,7 @@ angular.module('app', [
 	'app.layout',
 	'app.home',
 	'app.about',
-	'login'
+	'app.calendar',
+	'app.projects',
+	'app.testimonials'
 ]);

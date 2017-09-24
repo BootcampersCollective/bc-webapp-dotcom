@@ -1,3 +1,4 @@
+/*@ngInject*/
 function aboutRoute($stateProvider) {
 	$stateProvider
 		.state({
@@ -10,5 +11,3 @@ function aboutRoute($stateProvider) {
 
 angular.module('app.about')
 	.config(aboutRoute);
-
-aboutRoute.$inject = ['$stateProvider'];

@@ -1,7 +1,7 @@
 const bodyComponent = {
 	bindings: {},
 	controller: function () {},
-	template: `<div class="body-container" style="height: 250px; overflow-y: scroll;">
+	template: `<div class="body-container">
     <ui-view></ui-view>
 </div>`
 };
