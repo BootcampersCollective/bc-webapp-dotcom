@@ -44,5 +44,5 @@ app.get('*', function (req, res){
 	res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(3030);
+app.listen(process.env.NODE_PORT || 3000);
 console.log('Server started listening on 3030');
