@@ -3,6 +3,7 @@ angular.module('app', [
 	'app.common',
 	'app.core',
 	'app.layout',
+	'app.widgets',
 	'app.home',
 	'app.about',
 	'app.calendar',

@@ -1,9 +1,11 @@
 @import 'mixins';
 @import 'vars';
+@import 'typography';
 @import 'layout/layout';
 @import 'pages/home';
 @import 'pages/about';
 
 body {
   margin: 0;
+  font-family: $font-family-sans-serif;
 }
