@@ -23,6 +23,7 @@ const headerComponent = {
            ng-click="$ctrl.nav()">Testimonials</a>
         <a class="link-button" ui-sref="app.projects" ui-sref-active="active" ng-click="$ctrl.nav()">Projects</a>
         <a class="link-button" ui-sref="app.calendar" ui-sref-active="active" ng-click="$ctrl.nav()">Calendar</a>
+        <a class="link-button" ng-click="$ctrl.nav()" ng-if="$ctrl.dropdown">Login</a>
     </div>
     <div class="menu-container" ng-click="$ctrl.userMenu = !$ctrl.userMenu">
         <i class="fa fa-user fa-2x" aria-hidden="true"></i>
