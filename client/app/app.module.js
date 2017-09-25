@@ -9,5 +9,6 @@ angular.module('app', [
 	'app.about',
 	'app.calendar',
 	'app.projects',
-	'app.testimonials'
+	'app.testimonials',
+	'app.services'
 ]);

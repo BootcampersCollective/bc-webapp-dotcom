@@ -1,0 +1,11 @@
+.home-container {
+  text-align: center;
+  img {
+    width: 200px;
+    margin-top: 25px;
+
+    @include breakpoint($bp-768) {
+      width: 500px;
+    }
+  }
+}

@@ -21,11 +21,8 @@ const homeComponent = {
 
 		function privateMethod() {}
 	},
-	template: `<div>
-    <h1>home</h1>
-    <div class="email-container">
-        <ui-view></ui-view>
-    </div>
+	template: `<div class="home-container">
+    <img src="https://bc-webapp-assets.nyc3.digitaloceanspaces.com/logos/bc-logo-NEW.png">
 </div>`
 };
 
