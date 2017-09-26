@@ -7,6 +7,6 @@ const routes = require('express').Router();
 routes.get('/testimonials', require('../controllers/testimonials.ctrl'));
 routes.get('/projects', require('../controllers/projects.ctrl'));
 routes.get('/calendar', require('../controllers/calendar.ctrl'));
-routes.get('/events', require('../controllers/meetups.ctrl'));
+routes.get('/events', require('../controllers/events.ctrl'));
 
 module.exports = routes;

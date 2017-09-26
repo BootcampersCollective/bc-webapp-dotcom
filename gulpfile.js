@@ -117,10 +117,19 @@ gulp.task('default', [
 // Watch
 gulp.task('watch', ['default'], function () {
 	console.log('---Starting Watch task---');
-	require('./server/server.js');
 	livereload.listen();
 	gulp.watch(INDEX_PATH, ['copyIndex']);
 	gulp.watch(IMAGE_PATH, ['copyImage']);
 	gulp.watch(CLIENT_SCRIPTS_PATH, ['clientScripts']);
 	gulp.watch(STYLE_PATH, ['styles']);
+	var stream = nodemon({ script: './server/server.js', ext: 'js'});
+
+	stream
+		.on('restart', function () {
+			console.log('restarted!');
+		})
+		.on('crash', function() {
+			console.error('Application has crashed!\n');
+			stream.emit('restart', 10)
+		});
 });

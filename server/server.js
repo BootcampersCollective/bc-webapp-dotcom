@@ -8,12 +8,17 @@ let morgan = require('morgan');
 let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
 let path = require('path');
+let helmet = require('helmet');
 let fs = require('fs');
 
 let serverPort = process.env.NODE_PORT || 3000;
 
+console.log('NODE_ENV', process.env.NODE_ENV);
+const env = process.env.NODE_ENV;
+
 app.use(express.static(__dirname + '/../public'));
-app.use(morgan('dev'));
+app.use(morgan(env));
+app.use(helmet());
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
 app.use(methodOverride());
