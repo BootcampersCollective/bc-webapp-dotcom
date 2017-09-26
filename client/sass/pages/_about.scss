@@ -4,7 +4,11 @@
   align-items: center;
 
   .mission-goals {
-    width: 600px;
+    width: auto;
+
+    @include breakpoint($bp-768) {
+      width: 600px;
+    }
 
     div {
       margin: 25px 0;
@@ -16,8 +20,13 @@
   }
 
   .mission-statement {
-    width: 800px;
-    margin-top: 50px;
+    width: auto;
+    margin-top: 15px;
+
+    @include breakpoint($bp-768){
+      width: 800px;
+      margin-top: 50px;
+    }
 
     .label {
       text-align: center;
