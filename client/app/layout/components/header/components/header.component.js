@@ -20,7 +20,7 @@ const headerComponent = {
         <a class="link-button" ui-sref="app.projects" ui-sref-active="active" ng-click="$ctrl.nav()">Latest Work</a>
         <a class="link-button" ui-sref="app.services" ui-sref-active="active" ng-click="$ctrl.nav()">Services</a>
         <a class="link-button" ui-sref="app.events" ui-sref-active="active" ng-click="$ctrl.nav()">Events</a>
-        <a class="link-button" href="http://slack.bootcamperscollective.com" target="_blank" disabled>Join Us</a>
+        <a class="link-button" href="http://45.55.10.167/" target="_blank" disabled>Join Us</a>
     </div>
     <div class="responsive-menu" ng-click="$ctrl.dropdown = !$ctrl.dropdown">
         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
