@@ -14,8 +14,16 @@ const servicesComponent = {
 
 		// function privateMethod() {}
 	},
-	template: `<div>
-	<h1>Services</h1>
+	template: `<div class="services-container">
+    <div class="service-group">
+        <h1>Web Services</h1>
+        <div class="service-text">
+            Developing websites for consumers & Consulting for small businesses and startups</div>
+    </div>
+    <div class="service-group">
+        <h1>Career Services</h1>
+        <div class="service-text">Providing web developers with career coaching and support (job search, interviewing, strategy) and organizing career-focused events</div>
+    </div>
 </div>`
 };
 
