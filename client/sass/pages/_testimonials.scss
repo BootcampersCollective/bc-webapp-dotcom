@@ -1,13 +1,15 @@
 .testimonial-container {
-  .testimonial-block {
-    img {
-      float: left;
-    }
-    span {
+  display: flex;
+  flex-direction: column;
 
-    }
-    div {
-      margin-bottom: 20px;
-    }
+  img {
+    margin-right: 15px;
+  }
+
+  .testimonial-block {
+    margin: 15px 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
   }
 }
