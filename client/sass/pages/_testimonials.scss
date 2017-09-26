@@ -4,6 +4,12 @@
 
   img {
     margin-right: 15px;
+    height: 25%;
+    width: 25%;
+
+    @include breakpoint($bp-768) {
+      width: auto;
+    }
   }
 
   .testimonial-block {
