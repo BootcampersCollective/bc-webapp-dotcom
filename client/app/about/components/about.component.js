@@ -15,12 +15,7 @@ const aboutComponent = {
 		// function privateMethod() {}
 	},
 	template: `<div>
-<h1>about</h1>
-<ul>
-<li ui-sref-active="">me</li>
-<li ui-sref-active="">you</li>
-<li ui-sref-active="">other</li>
-</ul>
+<h1>Mission</h1>
 </div>`
 };
 
