@@ -9,7 +9,58 @@
     }
   }
 
-  .text-container {
+  .work-container {
     margin-top: 50px;
+    h1 {
+      font-size: 64px;
+    }
+  }
+
+  .flow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div{
+      img {
+        margin-bottom: 25px;
+      }
+    }
+
+    .slack-image {
+      width: 125px;
+
+      img {
+        width: 125px;
+      }
+    }
+
+    .arrow-image {
+      padding-top: 30px;
+      margin: 0 15px;
+      img {
+        width: 50px;
+      }
+    }
+
+    .coding-image {
+      width: 200px;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .money-image {
+      padding-top: 10px;
+      width: 175px;
+      img {
+        width: 175px;
+      }
+    }
+
+    .sub-title {
+      font-size: 25px;
+    }
   }
 }
