@@ -24,7 +24,11 @@
   .flow-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+
+    @include breakpoint($bp-1024) {
+      margin-top: 30px;
+    }
 
     div{
       img {
@@ -39,11 +43,19 @@
         width: 125px;
       }
 
+      @include breakpoint($bp-1024) {
+        width: 160px;
+      }
+
       img {
         width: 50px;
 
         @include breakpoint($bp-768) {
           width: 125px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 160px;
         }
       }
     }
@@ -57,11 +69,19 @@
         margin: 0 15px;
       }
 
+      @include breakpoint($bp-1024) {
+
+      }
+
       img {
         width: 20px;
 
         @include breakpoint($bp-768) {
           width: 50px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 70px;
         }
       }
     }
@@ -73,11 +93,19 @@
         width: 200px;
       }
 
+      @include breakpoint($bp-1024) {
+        width: 250px;
+      }
+
       img {
         width: 75px;
 
         @include breakpoint($bp-768) {
           width: 200px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 250px;
         }
       }
     }
@@ -91,11 +119,19 @@
         width: 175px;
       }
 
+      @include breakpoint($bp-1024) {
+        width: 210px;
+      }
+
       img {
         width: 70px;
 
         @include breakpoint($bp-768) {
           width: 175px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 210px;
         }
       }
     }
@@ -105,6 +141,10 @@
 
       @include breakpoint($bp-768) {
         font-size: 25px;
+      }
+
+      @include breakpoint($bp-1024) {
+        font-size: 32px;
       }
     }
   }
