@@ -60,6 +60,11 @@ const homeComponent = {
         <div class="client-text">
             We are a full service web development shop that assists small to mid size businesses and non-profits with websites and applications through a highly customized and personable approach.  Here's a few of our clients who we have helped in the past.
         </div>
+        <div class="client-images">
+            <img src="https://bc-webapp-assets.nyc3.digitaloceanspaces.com/clients/5340CoffeeLogo.png">
+            <img src="https://bc-webapp-assets.nyc3.digitaloceanspaces.com/clients/awp.png">
+            <img src="https://bc-webapp-assets.nyc3.digitaloceanspaces.com/clients/rowdyMermaidWordyLogo.png">
+        </div>
     </div>
 </div>`
 };
