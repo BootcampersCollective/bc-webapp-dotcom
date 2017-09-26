@@ -9,6 +9,8 @@
     @include breakpoint($bp-768) {
       width: auto;
       margin-right: 15px;
+      max-height: 200px;
+      max-width: 200px;
     }
   }
 
