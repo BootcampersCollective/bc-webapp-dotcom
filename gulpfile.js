@@ -33,6 +33,13 @@ gulp.task('images', function () {
 	console.log('---Starting Images task---');
 });
 
+// fav.ico
+gulp.task('favicon', function () {
+	console.log('---Starting favicon task---');
+	return gulp.src('assets/fav.ico')
+		.pipe(gulp.dest('public'));
+});
+
 // Assets
 gulp.task('copyImages', function () {
 	console.log('---Starting Copy Images task---');
@@ -106,6 +113,7 @@ gulp.task('default', [
 	'clean',
 	'copyFonts',
 	'copyImages',
+	'favicon',
 	'copyIndex',
 	'styles',
 	'vendorScripts',
