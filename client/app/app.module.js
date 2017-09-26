@@ -10,5 +10,6 @@ angular.module('app', [
 	'app.calendar',
 	'app.projects',
 	'app.testimonials',
-	'app.services'
+	'app.services',
+	'app.events'
 ]);

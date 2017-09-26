@@ -18,7 +18,7 @@
       margin: auto 0;
       display: flex;
       justify-content: space-around;
-      width: 400px;
+      width: 700px;
 
       .link-button {
         color: black;
@@ -45,6 +45,8 @@
       background-color: black;
 
       .link-button {
+        text-decoration: none;
+        color: white;
         display: block;
         padding: 10px;
 
@@ -54,6 +56,7 @@
       }
 
       :hover {
+        color: black;
         background-color: white;
       }
     }

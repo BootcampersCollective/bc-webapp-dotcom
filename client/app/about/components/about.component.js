@@ -1,6 +1,6 @@
 const aboutComponent = {
 	bindings: {},
-	controller: function () {
+	controller: /*@ngInject*/ function () {
 		let ctrl = this;
 
 		ctrl.publicMethods = publicMethods;

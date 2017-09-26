@@ -14,21 +14,14 @@ const headerComponent = {
 	},
 	template: `<div class="header-container">
     <div class="link-bar" ng-class="{'dropdown': $ctrl.dropdown}">
-        <!--<a class="link-button" ui-sref="app.home" ui-sref-active="active" ng-click="$ctrl.nav()">Home</a>-->
         <a class="link-button" ui-sref="app.about" ui-sref-active="active" ng-click="$ctrl.nav()">Our Mission</a>
         <a class="link-button" ui-sref="app.testimonials" ui-sref-active="active"
            ng-click="$ctrl.nav()">Testimonials</a>
         <a class="link-button" ui-sref="app.projects" ui-sref-active="active" ng-click="$ctrl.nav()">Latest Work</a>
         <a class="link-button" ui-sref="app.services" ui-sref-active="active" ng-click="$ctrl.nav()">Services</a>
-        <a class="link-button" ng-click="$ctrl.nav()" ng-if="$ctrl.dropdown">Login</a>
+        <a class="link-button" ui-sref="app.events" ui-sref-active="active" ng-click="$ctrl.nav()">Events</a>
+        <a class="link-button" href="http://slack.bootcamperscollective.com" target="_blank" disabled>Join Us</a>
     </div>
-    <!--<div class="menu-container" ng-click="$ctrl.userMenu = !$ctrl.userMenu">-->
-        <!--<i class="fa fa-user fa-2x" aria-hidden="true"></i>-->
-    <!--</div>-->
-    <!--<div class="user-menu" ng-show="$ctrl.userMenu">-->
-        <!--<div class="menu-button">Login</div>-->
-        <!--<div class="menu-button">Logout</div>-->
-    <!--</div>-->
     <div class="responsive-menu" ng-click="$ctrl.dropdown = !$ctrl.dropdown">
         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
     </div>

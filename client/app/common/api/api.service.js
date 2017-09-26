@@ -2,7 +2,8 @@ function apiService($q, $http) {
 	const service = {
 		getTestimonials: getTestimonials,
 		getProjects: getProjects,
-		getCalendar: getCalendar
+		getCalendar: getCalendar,
+		getEvents: getEvents
 	};
 	return service;
 
@@ -24,6 +25,13 @@ function apiService($q, $http) {
 		return $http({
 			method: 'GET',
 			url: '/api/calendar'
+		});
+	}
+
+	function getEvents() {
+		return $http({
+			method: 'GET',
+			url: '/api/events'
 		});
 	}
 
