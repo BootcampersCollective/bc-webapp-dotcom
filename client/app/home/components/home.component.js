@@ -55,6 +55,12 @@ const homeComponent = {
             </div>
         </div>
     </div>
+    <div class="client-container">
+        <h1>Who are our clients?</h1>
+        <div class="client-text">
+            We are a full service web development shop that assists small to mid size businesses and non-profits with websites and applications through a highly customized and personable approach.  Here's a few of our clients who we have helped in the past.
+        </div>
+    </div>
 </div>`
 };
 

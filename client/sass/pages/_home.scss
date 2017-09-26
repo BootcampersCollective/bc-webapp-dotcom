@@ -1,5 +1,14 @@
 .home-container {
   text-align: center;
+
+  h1 {
+    font-size: 24px;
+
+    @include breakpoint($bp-768) {
+      font-size: 64px;
+    }
+  }
+
   img {
     width: 200px;
     margin-top: 25px;
@@ -11,14 +20,6 @@
 
   .work-container {
     margin-top: 50px;
-
-    h1 {
-      font-size: 24px;
-
-      @include breakpoint($bp-768) {
-        font-size: 64px;
-      }
-    }
   }
 
   .flow-container {
@@ -146,6 +147,16 @@
       @include breakpoint($bp-1024) {
         font-size: 32px;
       }
+    }
+  }
+
+  .client-container {
+    h1 {
+      margin: 25px 0;
+    }
+
+    .client-text {
+      font-size: 24px;
     }
   }
 }
