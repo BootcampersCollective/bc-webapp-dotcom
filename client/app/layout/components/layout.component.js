@@ -8,9 +8,6 @@ const layoutComponent = {
     <div class="body-div">
         <body-component></body-component>
     </div>
-    <!--<div>-->
-        <!--<footer-component></footer-component>-->
-    <!--</div>-->
 </div>`
 };
 
