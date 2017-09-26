@@ -14,6 +14,7 @@ const headerComponent = {
 	},
 	template: `<div class="header-container">
     <div class="link-bar" ng-class="{'dropdown': $ctrl.dropdown}">
+        <a class="link-button" ui-sref="app.home" ui-sref-active="active" ng-click="$ctrl.nav()">Home</a>
         <a class="link-button" ui-sref="app.about" ui-sref-active="active" ng-click="$ctrl.nav()">Our Mission</a>
         <a class="link-button" ui-sref="app.testimonials" ui-sref-active="active"
            ng-click="$ctrl.nav()">Testimonials</a>
