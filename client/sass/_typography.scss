@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'norwester';
+  src: url('../fonts/norwester.eot') format('eot');
+  src: url('../fonts/norwester.otf') format('otf');
+  src: url('../fonts/norwester.ttf') format('ttf');
+  src: url('../fonts/norwester.woff') format('woff');
+}
 
-
-$font-family-sans-serif: 'Droid Sans', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'norwester', Helvetica, Arial, sans-serif;
