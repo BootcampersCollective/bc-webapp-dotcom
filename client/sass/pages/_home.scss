@@ -33,14 +33,14 @@
     }
 
     .slack-image {
-      width: 40px;
+      width: 50px;
 
       @include breakpoint($bp-768) {
         width: 125px;
       }
 
       img {
-        width: 40px;
+        width: 50px;
 
         @include breakpoint($bp-768) {
           width: 125px;
@@ -67,14 +67,14 @@
     }
 
     .coding-image {
-      width: 90px;
+      width: 75px;
 
       @include breakpoint($bp-768) {
         width: 200px;
       }
 
       img {
-        width: 90px;
+        width: 75px;
 
         @include breakpoint($bp-768) {
           width: 200px;
