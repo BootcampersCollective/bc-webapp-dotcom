@@ -26,10 +26,13 @@ const testimonialsComponent = {
         <div class="testimonial-block" ng-repeat="testimonial in $ctrl.testimonials">
             <img src="{{testimonial.image}}" ng-if="testimonial.image">
             <div>
-                <div>
-                    Name: {{testimonial.name}}
+                <div class="name">
+                    {{testimonial.name}}
                 </div>
-                <div>
+                <div ng-if="testimonial.position" class="position">
+                    {{testimonial.position}}
+                </div>
+                <div class="description">
                     {{testimonial.long}}
                 </div>
             </div>
