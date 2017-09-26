@@ -23,7 +23,11 @@ const projectsComponent = {
     <h1>Projects</h1>
     <div class="projects-container">
         <div ng-repeat="project in $ctrl.projects">
-            {{project}}
+            <h3>{{project.name}}</h3>
+            <div>{{project.description}}</div>
+            <div>
+                <img ng-repeat="image in project.images track by $index" src="{{image}}">
+            </div>
         </div>
     </div>
 </div>`
