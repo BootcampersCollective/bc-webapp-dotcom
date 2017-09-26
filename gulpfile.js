@@ -36,7 +36,7 @@ gulp.task('images', function () {
 // fav.ico
 gulp.task('favicon', function () {
 	console.log('---Starting favicon task---');
-	return gulp.src('assets/fav.ico')
+	return gulp.src('assets/favicon.ico')
 		.pipe(gulp.dest('public'));
 });
 
