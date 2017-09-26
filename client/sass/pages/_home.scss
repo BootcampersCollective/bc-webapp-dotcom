@@ -11,8 +11,13 @@
 
   .work-container {
     margin-top: 50px;
+
     h1 {
-      font-size: 64px;
+      font-size: 24px;
+
+      @include breakpoint($bp-768) {
+        font-size: 64px;
+      }
     }
   }
 
@@ -28,39 +33,79 @@
     }
 
     .slack-image {
-      width: 125px;
+      width: 40px;
+
+      @include breakpoint($bp-768) {
+        width: 125px;
+      }
 
       img {
-        width: 125px;
+        width: 40px;
+
+        @include breakpoint($bp-768) {
+          width: 125px;
+        }
       }
     }
 
     .arrow-image {
-      padding-top: 30px;
-      margin: 0 15px;
+      padding-top: 15px;
+      margin: 0 5px;
+
+      @include breakpoint($bp-768) {
+        padding-top: 30px;
+        margin: 0 15px;
+      }
+
       img {
-        width: 50px;
+        width: 20px;
+
+        @include breakpoint($bp-768) {
+          width: 50px;
+        }
       }
     }
 
     .coding-image {
-      width: 200px;
+      width: 90px;
+
+      @include breakpoint($bp-768) {
+        width: 200px;
+      }
 
       img {
-        width: 200px;
+        width: 90px;
+
+        @include breakpoint($bp-768) {
+          width: 200px;
+        }
       }
     }
 
     .money-image {
-      padding-top: 10px;
-      width: 175px;
-      img {
+      width: 70px;
+      padding-top: 5px;
+
+      @include breakpoint($bp-768) {
+        padding-top: 10px;
         width: 175px;
+      }
+
+      img {
+        width: 70px;
+
+        @include breakpoint($bp-768) {
+          width: 175px;
+        }
       }
     }
 
     .sub-title {
-      font-size: 25px;
+      font-size: 14px;
+
+      @include breakpoint($bp-768) {
+        font-size: 25px;
+      }
     }
   }
 }
