@@ -19,18 +19,16 @@ const projectsComponent = {
 
 		// function privateMethod() {}
 	},
-	template: `<div>
-    <h1>Projects</h1>
+	template: `
     <div class="projects-container">
-        <div ng-repeat="project in $ctrl.projects">
+        <div class="project-card" ng-repeat="project in $ctrl.projects">
             <h3>{{project.name}}</h3>
-            <div>{{project.description}}</div>
-            <div>
+            <div class="project-description">{{project.description}}</div>
+            <div class="image-row">
                 <img ng-repeat="image in project.images track by $index" src="{{image}}">
             </div>
         </div>
-    </div>
-</div>`
+    </div>`
 };
 
 angular.module('app.projects')

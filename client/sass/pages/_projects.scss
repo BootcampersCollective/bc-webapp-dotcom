@@ -1,0 +1,13 @@
+.projects-container {
+  .project-card {
+    .project-description {
+      margin-bottom: 30px;
+    }
+
+    .image-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
