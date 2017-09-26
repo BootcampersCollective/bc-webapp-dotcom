@@ -1,3 +1,4 @@
+// TODO: Add Animations to home component
 const homeComponent = {
 	bindings: {
 		property: '<',
