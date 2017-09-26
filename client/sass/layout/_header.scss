@@ -44,6 +44,7 @@
       top: 63px;
       width: 100%;
       background-color: black;
+      z-index: 10;
 
       .link-button {
         text-decoration: none;
@@ -89,6 +90,7 @@
   .responsive-menu {
     margin: auto 0;
     display: block;
+
 
     @include breakpoint($bp-768) {
       display: none;
