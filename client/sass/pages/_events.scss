@@ -1,0 +1,30 @@
+.events-container{
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .event {
+    margin-bottom: 10px;
+
+    .event-name {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+
+      :hover {
+        color: $bcblue;
+        text-decoration: underline;
+      }
+    }
+
+    .event-url {
+      position: relative;
+      top: 5px;
+    }
+
+    .event-details {
+
+    }
+  }
+}

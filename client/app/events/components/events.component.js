@@ -3,7 +3,7 @@ const eventsComponent = {
 	controller: /*@ngInject*/ function (apiService) {
 		let ctrl = this;
 
-		ctrl.publicMethods = publicMethods;
+		ctrl.eventClick = eventClick;
 
 		ctrl.$onInit = function () {
 			apiService.getEvents()
@@ -16,14 +16,28 @@ const eventsComponent = {
 		ctrl.$onChange = function () {};
 		ctrl.$onDestroy = function () {};
 
-		function publicMethods() {}
+		function eventClick(event) {
+			event.detail = !event.detail;
+		}
 
 		// function privateMethod() {}
 	},
 	template: `<div class="events-container">
     <h1>Events</h1>
-    <div class="event" ng-repeat="event in $ctrl.events">
-        <div ng-bind-html="event.description"></div>
+    <div class="event" ng-repeat="event in $ctrl.events" ng-click="$ctrl.eventClick(event)">
+        <span class="event-name">{{event.name}}</span>
+        <span class="event-url">
+            <a href="{{event.event_url}}"><i class="fa fa-meetup fa-2x" aria-hidden="true"></i></a>
+        </span>
+        <div class="event-details" ng-show="event.detail">
+            <div class="event-time">{{event.time | date : 'M/d/yy h:mm a'}}</div>
+            <div class="event-vanue-name">{{event.venue.name}}</div>
+            <div class="event-venue-address">
+                <span ng-bind-html="event.venue.address_1"></span>, 
+                <span ng-bind-html="event.venue.city"></span>
+            </div>
+            <div class="event-description" ng-bind-html="event.description"></div>
+        </div>
     </div>
 </div>`
 };
