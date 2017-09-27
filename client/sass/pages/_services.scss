@@ -1,9 +1,37 @@
 .services-container {
-  .service-group {
-    margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    .service-text {
-      margin-left: 15px;
+  @include breakpoint($bp-768){
+    flex-direction: row;
+  }
+
+  .business-service {
+    flex: 1 1 auto;
+  }
+
+  .member-service {
+    flex: 1 1 auto;
+
+    @include breakpoint($bp-768) {
+      margin-left: 25px;
+    }
+  }
+
+  .service-group {
+    width: 100%;
+
+    @include breakpoint($bp-768){
+      width: 360px;
+    }
+
+    @include breakpoint($bp-1024) {
+      width: 500px;
+    }
+
+    @include breakpoint($bp-1440) {
+      width: 700px;
     }
   }
 }
