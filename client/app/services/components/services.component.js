@@ -13,7 +13,7 @@ const servicesComponent = {
 		function publicMethods() {}
 
 		// function privateMethod() {}
-	},
+	},/* jshint ignore:start */
 	template: `<div class="services-container">
     <div class="business-service">
         <h1>How we help...Businesses</h1>
@@ -25,7 +25,7 @@ const servicesComponent = {
             </ul>
         </div>
         <div class="service-group">
-            <h1>Talent Services</h1>
+            <h3>Talent Services</h3>
             <ul>
                 <li>Identifying talent at all levels & matching to employers based on skills.</li>
                 <li>Post your openings to our job board on Slack.</li>
@@ -37,7 +37,7 @@ const servicesComponent = {
     <div class="member-service">
         <h1>How we help...Members</h1>
         <div class="service-group">
-            <h1>Web Services</h1>
+            <h3>Web Services</h3>
             <ul>
                 <li>Hackathons - Hands-on learning and valuable experience for your resume.</li>
                 <li>Projects - The ability to work on live code and contribute your skills to real businesses in the community. Challenge yourself here!</li>
@@ -45,7 +45,7 @@ const servicesComponent = {
             </ul>
         </div>
         <div class="service-group">
-            <h1>Career Services</h1>
+            <h3>Career Services</h3>
             <ul>
                 <li>Career consulting and interview preparation for Developers seeking local opportunities.</li>
                 <li>Educational and career-focused events on Meetup.</li>
@@ -54,7 +54,7 @@ const servicesComponent = {
         </div>
     </div>
 </div>`
-};
+};/* jshint ignore:end */
 
 angular.module('app.services')
 	.component('servicesComponent', servicesComponent);
