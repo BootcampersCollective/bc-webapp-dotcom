@@ -7,8 +7,9 @@
   "author": "Wesley Song <wes.song@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "yarn && gulp",
-    "start": "nf start"
+    "build": "gulp",
+    "postinstall": "gulp",
+    "start": "node server/server.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
