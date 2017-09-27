@@ -161,9 +161,13 @@
 
     .client-images {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: space-around;
+
+      @include breakpoint($bp-768) {
+        flex-direction: row;
+      }
 
       img{
         max-width: 200px;

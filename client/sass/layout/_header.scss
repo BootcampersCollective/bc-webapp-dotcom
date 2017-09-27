@@ -1,7 +1,10 @@
 .header-container {
+  position: fixed;
+  width: calc(100% - 40px);
+  z-index: 100;
   font-family: $font-family-menu;
   flex: 1;
-  height: 100%;
+  min-height: 75px;
   padding: 5px 20px;
   display: flex;
   flex-direction: row;
