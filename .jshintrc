@@ -1,0 +1,30 @@
+{
+  "browserify": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": "nofunc",
+  "newcap": true,
+  "nonew": true,
+  "noarg": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "sub": true,
+  "maxlen": 120,
+  "esnext": true,
+  "browser": true,
+  "node": true,
+  "mocha": true,
+
+  "globals": {
+    "angular": false,
+    "Modernizr": false,
+    "_":  false
+  }
+}

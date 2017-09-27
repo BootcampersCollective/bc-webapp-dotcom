@@ -1,0 +1,41 @@
+@mixin breakpoint($bp, $direction: min) {
+  @media screen and (#{$direction}-width: $bp)  {
+    @content;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin svg-shadow() {
+  opacity: .5;
+  position: absolute;
+  z-index: -1;
+
+  svg {
+    fill: $black;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+@mixin target-ie11 {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin font-size($pxSize) {
+  font-size: $pxSize; // fallback in px (also good for sanity-checking)
+  font-size: px-to-rem($pxSize);
+}
+
+@function px-to-rem($pxSize) {
+  $remSize: $pxSize / $font-size-base-px;
+  @return #{$remSize}rem;
+}

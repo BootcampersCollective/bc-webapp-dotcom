@@ -1,0 +1,60 @@
+.events-container{
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .event {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+
+      &.open{
+        margin-bottom: 10px;
+
+        @include breakpoint($bp-768) {
+          margin-bottom: 25px;
+        }
+      }
+
+      .event-name {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+
+        :hover {
+          color: $bcblue;
+          text-decoration: underline;
+        }
+      }
+
+      .event-url {
+        position: relative;
+        top: -5px;
+        left: 10px;
+      }
+    }
+
+    .event-details {
+      a {
+        display: none;
+
+        @include breakpoint($bp-768) {
+          display: initial;
+        }
+      }
+
+      img {
+        width: 275px;
+
+        @include breakpoint($bp-768) {
+          width: auto;
+        }
+      }
+    }
+  }
+}

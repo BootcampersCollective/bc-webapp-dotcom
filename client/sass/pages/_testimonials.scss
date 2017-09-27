@@ -1,0 +1,42 @@
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint($bp-768) {
+      margin-right: 15px;
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  .testimonial-block {
+    margin: 15px 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($bp-768) {
+      flex-direction: row;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .position {
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .description {
+
+    }
+  }
+}
