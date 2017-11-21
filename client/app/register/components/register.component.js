@@ -26,48 +26,68 @@ const registerComponent = {
   },
   template: `
   <div class="events-container">
-    <h1>Register</h1>
-	<form name="registerForm" ng-submit="$ctrl.formSubmit()">
-		<div class="form-group">
-			<label>Name</label>
-			<input type="text" ng-model="$ctrl.form.name" required>
-		</div>
-		<div class="form-group">
-			<label>Email</label>
-			<input type="text" ng-model="$ctrl.form.email" required>
-		</div>
-		<div class="form-group">
-			<label>Years Coding</label>
-			<input type="text" ng-model="$ctrl.form.years" required>
-		</div>
-		<div class="form-group">
-			<label>Back End/Front End</label>
-			<input type="text" ng-model="$ctrl.form.stackside" required>
-		</div>
-		<div class="form-group">
-			<label>GitHub Handle</label>
-			<input type="text" ng-model="$ctrl.form.github" required>
-		</div>
-		<div class="form-group">
-			<label>LinkedIn URL</label>
-			<input type="text" ng-model="$ctrl.form.linkedin" required>
-		</div>
-		<div class="form-group">
-			<label>Team Name</label>
-			<input type="text" ng-model="$ctrl.form.team">
-		</div>
-		<div class="form-group">
-			<label>Coding School Attended</label>
-			<input type="text" ng-model="$ctrl.form.school" required>
-		</div>
-		<div class="button-row">
-  			<button type="submit">Submit</button>
-		</div>
-    </form>
+	  <div class="title-container">
+	  	<h1>Register</h1>
+	  </div>
+	  <div class="form-container">
+		<form name="registerForm" ng-submit="$ctrl.formSubmit()">
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.name" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Name</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.email" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Email</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.years" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Years Coding</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.stackside" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Back End/Front End</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.github" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>GitHub Handle</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.linkedin" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>LinkedIn URL</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.team">
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Team Name</label>
+			</div>
+			<div class="form-group">
+				<input type="text" ng-model="$ctrl.form.school" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Coding School Attended</label>
+			</div>
+			<div class="button-row">
+				<button class="btn" type="submit">Submit</button>
+			</div>
+		</form>
+	  </div>
 </div>
 `
 };
 
 angular
-  .module("app.register")
-  .component("registerComponent", registerComponent);
+  .module('app.register')
+  .component('registerComponent', registerComponent);
