@@ -11,10 +11,9 @@ module.exports = function (req, res) {
 	// 		res.status(200);
 	// 	}
     // });
-    sendgrid.sendMail(req.body, function(err,response,data) {
-        console.log('sendgrid sendMail err, response, data', err, response, data);
-        if(!err) {
-            res.status(200);
-        }
+    sendgrid.sendMail(req.body, function(err,res) {
+        console.log('sendgrid sendMail err, res', err, res);
+
+        res.status(res.statusCode).send(res.statusMessage);
     });
 };

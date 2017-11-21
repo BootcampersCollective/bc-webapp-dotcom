@@ -16,6 +16,7 @@ const registerComponent = {
 	  apiService.sendRegistration(ctrl.form)
 		.then(function(res){
 			console.log('formSubmit res', res);
+			ctrl.form = {};
 		})
 		.catch(function(err){
 			console.log('formSubmit err', err);
