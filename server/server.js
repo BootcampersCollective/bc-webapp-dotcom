@@ -10,6 +10,7 @@ let methodOverride = require('method-override');
 let path = require('path');
 let helmet = require('helmet');
 let fs = require('fs');
+require('dotenv').config();
 
 let serverPort = process.env.NODE_PORT || 3000;
 
