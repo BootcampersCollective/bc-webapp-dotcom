@@ -12,5 +12,6 @@ angular.module('app', [
 	'app.projects',
 	'app.testimonials',
 	'app.services',
-	'app.events'
+	'app.events',
+	'app.register'
 ]);

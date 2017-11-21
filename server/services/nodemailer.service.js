@@ -1,10 +1,10 @@
 /*jshint node: true*/
 
 'use strict';
-let request = require('request');
 const nodemailer = require('nodemailer');
 
 function sendMail(req, cb) {
+    console.log('nodemailService req', req);
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -22,13 +22,9 @@ function sendMail(req, cb) {
         if (err) {
             console.log('err', err);
         } else {
-            console.log('info', info)
+            console.log('info', info);
         }
-    })
-	
-	request(options, function (error, response, body) {
-		cb(error,response,body);
-	});
+    });
 }
 
 const nodemailService = {
