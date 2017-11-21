@@ -33,54 +33,38 @@ const registerComponent = {
 		<form name="registerForm" ng-submit="$ctrl.formSubmit()">
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.name" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Name</label>
+				<label class="control-label">Name</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.email" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Email</label>
+				<label class="control-label">Email</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.years" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Years Coding</label>
+				<label class="control-label">Years Coding</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.stackside" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Back End/Front End</label>
+				<label class="control-label">Back End/Front End</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.github" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>GitHub Handle</label>
+				<label class="control-label">GitHub Handle</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.linkedin" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>LinkedIn URL</label>
+				<label class="control-label">LinkedIn URL</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.team">
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Team Name</label>
+				<label class="control-label">Team Name</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
 				<input type="text" ng-model="$ctrl.form.school" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label>Coding School Attended</label>
+				<label class="control-label">Coding School Attended</label><i class="bar"></i>
 			</div>
 			<div class="button-row">
-				<button class="btn" type="submit">Submit</button>
+				<button class="button" type="submit">Submit</button>
 			</div>
 		</form>
 	  </div>
