@@ -30,41 +30,48 @@ const registerComponent = {
 	  	<h1>Register</h1>
 	  </div>
 	  <div class="form-container">
-		<form name="registerForm" ng-submit="$ctrl.formSubmit()">
+		<form name="registerForm" ng-submit="$ctrl.formSubmit()" novalidate>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.name" required>
+				<input name="name" type="text" ng-model="$ctrl.form.name" required>
 				<label class="control-label">Name</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.name.$invalid && !registerForm.name.$pristine">Your name is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.email" required>
+				<input name="email" type="email" ng-model="$ctrl.form.email" required>
 				<label class="control-label">Email</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.email.$invalid && !registerForm.email.$pristine">Your email is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.years" required>
+				<input name="years" type="text" ng-model="$ctrl.form.years" required>
 				<label class="control-label">Years Coding</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.years.$invalid && !registerForm.years.$pristine">Years of Coding is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.stackside" required>
+				<input name="stackside" type="text" ng-model="$ctrl.form.stackside" required>
 				<label class="control-label">Back End/Front End</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.stackside.$invalid && !registerForm.stackside.$pristine">Which stack you want is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.github" required>
+				<input name="github" type="text" ng-model="$ctrl.form.github" required>
 				<label class="control-label">GitHub Handle</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.github.$invalid && !registerForm.github.$pristine">Your Github is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.linkedin" required>
+				<input name="linkedin" type="text" ng-model="$ctrl.form.linkedin" required>
 				<label class="control-label">LinkedIn URL</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.linkedin.$invalid && !registerForm.linkedin.$pristine">Your LinkedIn is required</span>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.team">
+				<input name="team" type="text" ng-model="$ctrl.form.team">
 				<label class="control-label">Team Name</label><i class="bar"></i>
 			</div>
 			<div class="form-group">
-				<input type="text" ng-model="$ctrl.form.school" required>
-				<label class="control-label">Coding School Attended</label><i class="bar"></i>
+				<input name="school" type="text" ng-model="$ctrl.form.school" required>
+				<label class="control-label">Coding School/Bootcamp Attended</label><i class="bar"></i>
+				<span class="input-error has-error" ng-show="registerForm.school.$invalid && !registerForm.school.$pristine">Your school/bootcamp is required</span>
 			</div>
 			<div class="button-row">
-				<button class="button" type="submit">Submit</button>
+				<button class="button" type="submit" ng-disabled="registerForm.$invalid">Submit</button>
 			</div>
 		</form>
 	  </div>
