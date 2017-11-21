@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: $default-background;
+  background-color: $default-bg;
 
   @include breakpoint($bp-768) {
     justify-content: space-around;
