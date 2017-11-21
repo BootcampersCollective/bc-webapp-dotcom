@@ -1,5 +1,6 @@
 angular.module('app', [
 	'ui.router',
+	'ui.router.state.events',
 	'ngSanitize',
 	'ngAnimate',
 	'app.common',
