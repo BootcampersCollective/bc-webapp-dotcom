@@ -3,11 +3,17 @@ const sgMail = require('@sendgrid/mail');
 function sendMail(req, cb) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-      to: 'test@example.com',
-      from: 'test@example.com',
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        from: 'no-reply@bootcamperscollective.com',
+        to: 'wes@bootcamperscollective.com',
+        subject: 'Sendgrid service test',
+        html: '<p>Name: '+ req.name +'</p>' +
+        '<p>Email: ' + req.email + '</p>' +
+        '<p>Years Coding: ' + req.years + '</p>' +
+        '<p>Back end/Front end: ' + req.stackside + '</p>' +
+        '<p>Github: ' + req.github + '</p>' +
+        '<p>LinkedIn: ' + req.linkedin + '</p>' +
+        '<p>Team: ' + req.team + '</p>' +
+        '<p>School: ' + req.school + '</p>'
     };
     sgMail.send(msg);
 };
