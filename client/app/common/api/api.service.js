@@ -3,7 +3,8 @@ function apiService($q, $http) {
 		getTestimonials: getTestimonials,
 		getProjects: getProjects,
 		getCalendar: getCalendar,
-		getEvents: getEvents
+		getEvents: getEvents,
+		sendRegistration: sendRegistration
 	};
 	return service;
 
@@ -32,6 +33,14 @@ function apiService($q, $http) {
 		return $http({
 			method: 'GET',
 			url: '/api/events'
+		});
+	}
+
+	function sendRegistration(data) {
+		return $http({
+			method: 'POST',
+			url: 'api/register',
+			data: data
 		});
 	}
 
