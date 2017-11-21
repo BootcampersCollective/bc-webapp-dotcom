@@ -61,3 +61,4 @@ typings/
 public
 index.js
 config.secret
+secrets
