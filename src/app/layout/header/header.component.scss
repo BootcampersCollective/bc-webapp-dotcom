@@ -1,0 +1,106 @@
+@import '~sass/_vars.scss';
+@import '~sass/_mixins.scss';
+@import '~sass/_typography.scss';
+
+.header-container {
+  position: fixed;
+  width: calc(100% - 40px);
+  z-index: 100;
+  font-family: $font-family-menu;
+  flex: 1;
+  min-height: 75px;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: $default-bg;
+
+  @include breakpoint($bp-768) {
+    justify-content: space-around;
+  }
+
+  .link-bar {
+    display: none;
+
+    @include breakpoint($bp-768) {
+      margin: auto 0;
+      display: flex;
+      justify-content: space-around;
+      width: 700px;
+
+      .link-button {
+        color: black;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+
+        &.active {
+          border-bottom: 2px solid $bcblue;
+          color: $bcblue;
+        }
+      }
+
+      :hover {
+        border-bottom: 2px solid $bcblue;
+      }
+    }
+
+    &.dropdown {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 63px;
+      width: 100%;
+      background-color: black;
+      z-index: 10;
+
+      .link-button {
+        text-decoration: none;
+        color: $text-color;
+        display: block;
+        padding: 10px;
+
+        &.active {
+          display: none;
+        }
+      }
+
+      :hover {
+        color: $text-hover;
+        background-color: $bcblue;
+      }
+    }
+  }
+
+  .menu-container {
+    display: none;
+
+    @include breakpoint($bp-768) {
+      display: block;
+      margin: auto 0;
+    }
+  }
+
+  .user-menu {
+    transition: all linear 0.5s;
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    padding: 10px;
+
+    .menu-button {
+      background-color: $bcblue;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  }
+
+  .responsive-menu {
+    margin: auto 0;
+    display: block;
+
+
+    @include breakpoint($bp-768) {
+      display: none;
+    }
+  }
+}
