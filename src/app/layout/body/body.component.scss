@@ -1,0 +1,14 @@
+@import '~sass/_vars.scss';
+@import '~sass/_typography.scss';
+
+:host{
+  flex: 1 1 auto;
+  display: flex;
+
+  div.body-container {
+    flex: 1 1 auto;
+    padding: 25px 25px;
+    background-color: $default-bg;
+    font-family: $font-family-body;
+  }
+}
