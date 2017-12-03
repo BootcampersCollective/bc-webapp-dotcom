@@ -1,6 +1,20 @@
-language: node_js
-node_js:
-  - "node"
-before_script:
-  - npm install -g gulp-cli
-script: gulp
+sudo: required
+
+language: javascript
+
+services:
+  - docker
+
+before_install:
+  - docker build -t bootcamperscollective/bc-webapp-dotcom .
+  - docker run -d bootcamperscollective/bc-webapp-dotcom /bin/sh -c "cd /root/bc-webapp-dotcom; npm start;"
+  - docker ps -a
+
+script:
+  - npm test
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push bootcamperscollective/bc-webapp-dotcom;
+    fi
