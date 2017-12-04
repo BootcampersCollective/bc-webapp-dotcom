@@ -15,6 +15,12 @@ register-component {
         width: 450px;
       }
 
+      .form-group{
+          .input-error {
+              @include font-size(10px);
+          }
+      }
+
       .button-row {
         text-align: center;
       }
