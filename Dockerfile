@@ -16,5 +16,5 @@ RUN yarn && yarn global add gulp && gulp
 # Bundle app source
 COPY . .
 
-EXPOSE 5000
+EXPOSE 3000
 CMD [ "npm", "start" ]
