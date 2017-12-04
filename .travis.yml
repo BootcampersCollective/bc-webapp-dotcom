@@ -1,19 +1,20 @@
-dist: trusty
-sudo: false
+sudo: required
 
-language: node_js
-node_js:
-  - "6"
+language: javascript
 
-cache:
-  directories:
-     - ./node_modules
+services:
+  - docker
 
-install:
-  - yarn install
+before_install:
+  - docker build -t bootcamperscollective/bc-webapp-dotcom .
+  - docker run -d bootcamperscollective/bc-webapp-dotcom /bin/sh -c "cd /root/bc-webapp-dotcom; npm start;"
+  - docker ps -a
 
 script:
-  # Use Chromium instead of Chrome.
-  - export CHROME_BIN=chromium-browser
-  - xvfb-run -a npm run test -- --single-run --no-progress --browser=ChromeNoSandbox
-  - xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
+  - npm test
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push bootcamperscollective/bc-webapp-dotcom;
+    fi

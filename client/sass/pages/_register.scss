@@ -1,0 +1,29 @@
+register-component {
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title-container {
+    }
+
+    .form-container {
+      width: 300px;
+
+      @include breakpoint($bp-768) {
+        width: 450px;
+      }
+
+      .form-group{
+          .input-error {
+              @include font-size(10px);
+          }
+      }
+
+      .button-row {
+        text-align: center;
+      }
+    }
+  }
+}
