@@ -12,7 +12,7 @@ let helmet = require('helmet');
 let fs = require('fs');
 require('dotenv').config();
 
-let serverPort = process.env.NODE_PORT || 3000;
+let serverPort = process.env.NODE_PORT || 5000;
 
 console.log('NODE_ENV', process.env.NODE_ENV);
 const env = process.env.NODE_ENV;

@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp",
-    "start": "node server/server.js"
+    "start": "node index.js",
+    "dev-docker": "../node_modules/nodemon/bin/nodemon.js --debug=5858",
+    "dev-host": "nodemon --debug=5858"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
