@@ -1,20 +1,16 @@
-FROM node:boron
+# We label our stage as 'builder'
+FROM node:8-alpine as builder
 
-# Create app directory
-WORKDIR /usr/src/app
+COPY package.json ./
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-COPY gulpfile.js ./
+RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
 
-RUN yarn && yarn global add gulp && gulp
-# If you are building your code for production
-# RUN npm install --only=production
+## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
+RUN npm i && mkdir /ng-app && cp -R ./node_modules ./ng-app
 
-# Bundle app source
+WORKDIR /ng-app
+
 COPY . .
 
-EXPOSE 3000
-CMD [ "npm", "start" ]
+## Build the angular app in production mode and store the artifacts in dist folder
+RUN $(npm bin)/ng build --prod --build-optimizer
