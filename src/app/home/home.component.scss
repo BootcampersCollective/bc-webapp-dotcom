@@ -1,0 +1,183 @@
+@import '~sass/_vars.scss';
+@import '~sass/_typography.scss';
+@import '~sass/_mixins.scss';
+
+.home-container {
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+
+    @include breakpoint($bp-768) {
+      font-size: 64px;
+    }
+  }
+
+  img {
+    width: 200px;
+    margin-top: 25px;
+
+    @include breakpoint($bp-768) {
+      width: 500px;
+    }
+  }
+
+  .work-container {
+    margin-top: 50px;
+  }
+
+  .flow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @include breakpoint($bp-1024) {
+      margin-top: 30px;
+    }
+
+    div{
+      img {
+        margin-bottom: 25px;
+      }
+    }
+
+    .slack-image {
+      width: 50px;
+
+      @include breakpoint($bp-768) {
+        width: 125px;
+      }
+
+      @include breakpoint($bp-1024) {
+        width: 160px;
+      }
+
+      img {
+        width: 50px;
+
+        @include breakpoint($bp-768) {
+          width: 125px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 160px;
+        }
+      }
+    }
+
+    .arrow-image {
+      padding-top: 15px;
+      margin: 0 5px;
+
+      @include breakpoint($bp-768) {
+        padding-top: 30px;
+        margin: 0 15px;
+      }
+
+      @include breakpoint($bp-1024) {
+
+      }
+
+      img {
+        width: 20px;
+
+        @include breakpoint($bp-768) {
+          width: 50px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 70px;
+        }
+      }
+    }
+
+    .coding-image {
+      width: 75px;
+
+      @include breakpoint($bp-768) {
+        width: 200px;
+      }
+
+      @include breakpoint($bp-1024) {
+        width: 250px;
+      }
+
+      img {
+        width: 75px;
+
+        @include breakpoint($bp-768) {
+          width: 200px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 250px;
+        }
+      }
+    }
+
+    .money-image {
+      width: 70px;
+      padding-top: 5px;
+
+      @include breakpoint($bp-768) {
+        padding-top: 10px;
+        width: 175px;
+      }
+
+      @include breakpoint($bp-1024) {
+        width: 210px;
+      }
+
+      img {
+        width: 70px;
+
+        @include breakpoint($bp-768) {
+          width: 175px;
+        }
+
+        @include breakpoint($bp-1024) {
+          width: 210px;
+        }
+      }
+    }
+
+    .sub-title {
+      font-size: 14px;
+
+      @include breakpoint($bp-768) {
+        font-size: 25px;
+      }
+
+      @include breakpoint($bp-1024) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .client-container {
+    h1 {
+      margin: 25px 0;
+    }
+
+    .client-text {
+      font-size: 24px;
+    }
+
+    .client-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      @include breakpoint($bp-768) {
+        flex-direction: row;
+      }
+
+      img{
+        max-width: 200px;
+      }
+    }
+
+
+  }
+}

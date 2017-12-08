@@ -20,25 +20,7 @@ const testimonialsComponent = {
 
 		// function privateMethod() {}
 	},
-	template: `<div>
-    <h1>Testimonials</h1>
-    <div class="testimonial-container">
-        <div class="testimonial-block" ng-repeat="testimonial in $ctrl.testimonials">
-            <img src="{{testimonial.image}}" ng-if="testimonial.image">
-            <div>
-                <div class="name">
-                    {{testimonial.name}}
-                </div>
-                <div ng-if="testimonial.position" class="position">
-                    {{testimonial.position}}
-                </div>
-                <div class="description">
-                    {{testimonial.long}}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>`
+	template: ``
 };
 
 angular.module('app.testimonials')

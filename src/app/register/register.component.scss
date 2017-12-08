@@ -1,0 +1,26 @@
+@import '~sass/_vars.scss';
+@import '~sass/_mixins.scss';
+@import '~sass/_typography.scss';
+
+:host {
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // .title-container {}
+
+    .form-container {
+      width: 300px;
+
+      @include breakpoint($bp-768) {
+        width: 450px;
+      }
+
+      .button-row {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,26 +1,19 @@
-# if you're doing anything beyond your local machine, please pin this to a specific version at https://hub.docker.com/_/node/
-FROM node:6.12.0
+# We label our stage as 'builder'
+FROM node:8-alpine as builder
 
-RUN mkdir -p /opt/app
+COPY package.json ./
 
-# set our node environment, either development or production
-# defaults to production, compose overrides this to development on build and run
-ARG NODE_ENV=production
-ENV NODE_ENV $NODE_ENV
+RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
 
-# default to port 80 for node, and 5858 or 9229 for debug
-ARG PORT=5000
-ENV PORT $PORT
-EXPOSE $PORT 5858 9229
+## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
+RUN npm i && mkdir /ng-app && cp -R ./node_modules ./ng-app
 
-# check every 30s to ensure this service returns HTTP 200
-HEALTHCHECK CMD curl -fs http://localhost:$PORT/healthz || exit 1
+WORKDIR /ng-app
 
-# install dependencies first, in a different location for easier app bind mounting for local development
-WORKDIR /opt
-COPY package.json package-lock.json* ./
-RUN npm install && npm cache clean --force
-ENV PATH /opt/node_modules/.bin:$PATH
+COPY . .
+
+## Build the angular app in production mode and store the artifacts in dist folder
+RUN $(npm bin)/ng build --prod --build-optimizer
 
 # copy in our source code last, as it changes the most
 WORKDIR /opt/app
