@@ -1,12 +1,14 @@
 <div class="projects-container">
-  <div class="project-card" ng-repeat="project in $ctrl.projects" ng-if="$ctrl.projects.length > 1">
-      <h3>{{project.name}}</h3>
-      <div class="project-description">{{project.description}}</div>
-      <div class="image-row">
-          <img ng-repeat="image in project.images track by $index" src="{{image}}">
-      </div>
+  <div *ngIf="projects.length">
+    <div class="project-card" *ngFor="let project of projects">
+            <h3>{{project.name}}</h3>
+            <div class="project-description">{{project.description}}</div>
+            <div class="image-row">
+                <img *ngFor="let image of project.images" src="{{image}}">
+            </div>
+    </div>
   </div>
-  <div class="coming-soon" ng-if="$ctrl.projects.length < 2">
+  <div class="coming-soon" *ngIf="!projects.length">
       <h1>Coming Soon!</h1>
   </div>
 </div>
