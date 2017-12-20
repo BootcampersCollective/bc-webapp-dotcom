@@ -10,6 +10,8 @@ RUN yarn && mkdir /ng-app && cp -R ./node_modules ./ng-app
 WORKDIR /ng-app
 
 COPY . .
-
 ## Build the angular app in production mode and store the artifacts in dist folder
 RUN $(npm bin)/ng build --prod --build-optimizer
+
+EXPOSE 4200
+CMD ["npm", "start"]
