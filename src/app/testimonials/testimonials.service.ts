@@ -10,7 +10,7 @@ export class TestimonialsService {
         },
         {
             "name": "Charles Williams",
-            "position": null,
+            "position": "Front End Developer at Cataworx",
             "long": "I want you to know that I have a huge respect for the Bootcampers Collective organization and their mission. I consider myself a proud member of the group ever since I came to the first meet up at the Boulder Beer Brewing Company. Everyone there in Bootcampers Collective makes me feel welcome and showed how willing you are to help others achieve greatness. I always look forward to the meetups and regret when I can’t make it to one.",
             "image": "https://d1qb2nb5cznatu.cloudfront.net/users/6609097-medium_jpg?1498777831"
         },
