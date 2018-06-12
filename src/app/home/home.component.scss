@@ -34,6 +34,9 @@
     @include breakpoint($bp-1024) {
       margin-top: 85px;
     }
+    @include breakpoint($bp-768) {
+      margin-top: 65px;
+    }
 
     div{
       img {
@@ -66,16 +69,21 @@
     }
 
     .arrow-image {
-      padding-top: 15px;
-      margin: 0 5px;
+      padding-top: 80px;
+      margin: 15 5px;
+
+      @include breakpoint($bp-320) {
+        padding-top: 25px
+      }
 
       @include breakpoint($bp-768) {
-        padding-top: 30px;
+        padding-top: 80px;
         margin: 0 15px;
+
       }
 
       @include breakpoint($bp-1024) {
-
+        padding-top: 80px;
       }
 
       img {
