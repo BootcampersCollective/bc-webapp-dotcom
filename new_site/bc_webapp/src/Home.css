@@ -1,0 +1,31 @@
+.home-container {
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.logo {
+    max-width: 40vw;
+}
+
+.flow-container {
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 90%;
+}
+
+.arrow-image {
+    max-width: 9vw;
+  }
+
+.coding-image {
+    max-width: 27vw;
+}
+
+.sub-title {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
