@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CommentDetail from './CommentDetail';
-import ApprovalCard from './ApprovalCard';
+// import CommentDetail from './CommentDetail';
+// import ApprovalCard from './ApprovalCard';
 import Home from './Home';
 import Navigation from './Navigation';
 
 const App = () => {
     return (
-        <div className="ui container comments">
+        <div>
             <Navigation></Navigation>
             <Home></Home>
+            
         </div>
     )
 };

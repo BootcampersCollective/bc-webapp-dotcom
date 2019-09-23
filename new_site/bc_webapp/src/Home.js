@@ -6,15 +6,16 @@ import './Assets/right-arrow.png';
 import './Assets/experience.png';
 
 
-
 const Home = props => {
+
     return (
       <div>
         <div className="home-container">
             <div>
               <img className="logo" src={require("./Assets/bc-logo-NEW.png")} alt='logo' />
             </div>
-        
+        </div>
+
           <div className="flow-container">
               {/* Join Slack Section */}
               <div>
@@ -26,9 +27,9 @@ const Home = props => {
                   </div>
               </div>
               {/* Arrow Section */}
-                <div className="arrow-div">
+                {/* <div className="arrow-div">
                     <img className="arrow-image" src={require("./Assets/right-arrow.png")} alt='rightarrow'/>
-                </div>
+                </div> */}
               {/* Code of Projects Section */}
               <div>
                   <a href="https://github.com/bootcamperscollective" rel="noopener noreferrer" target="_blank"> 
@@ -39,9 +40,9 @@ const Home = props => {
                   </div>
               </div>
               {/* Arrow Section */}
-              <div className="arrow-div">
+              {/* <div className="arrow-div">
                   <img className="arrow-image" src={require("./Assets/right-arrow.png")} alt='rightarrow'/>
-              </div>
+              </div> */}
               {/* Build Your Portfolio Section */}
               <div>
                   <img className="coding-image"src={require("./Assets/experience.png")} alt='experience' />
@@ -50,7 +51,6 @@ const Home = props => {
                   </div>
               </div>
           </div>
-        </div>
     </div>
    
     );
